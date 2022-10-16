@@ -1,0 +1,53 @@
+.competence
+				{
+					border:solid 1px #685a56;
+					font-weight: bold;
+					padding:15px;
+					border-radius:20px;
+					margin:15px;
+					
+				
+				}
+				.competences
+				{
+					display:flex;
+					flex-wrap:wrap;
+					justify-content: space-between;
+				    
+					
+
+				}
+				#competences > header:nth-child(1) > h4:nth-child(1)
+				{
+					padding-bottom: 50px;
+				}
+				#i360
+				{
+					background-image: url("../../images/i360.png");
+					background-repeat: no-repeat;
+					background-size: cover
+					
+					
+				}
+				#imagei360
+				{
+					height:500px
+				}
+				#gomycode
+				{
+					background-image: url("../../images/gomycode1.png");
+					background-repeat: no-repeat;
+					background-size: contain;
+					height: 45px
+				}
+				.bricoDeco
+				{
+					
+					font-weight: bold;
+					padding:10px;
+			
+				}
+				#Screenshot{
+					border:solid 1px #685a56;
+					
+				}
