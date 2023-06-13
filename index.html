@@ -25,7 +25,7 @@
 					<div id="intro">
 						<h1><br />
 						Mohamed Ali ANNABI</h1>
-						<p> Software automation quality engineer </p>
+						<p> Software Quality Engineer </p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -79,24 +79,29 @@
 									
 									<h4> My skills </h4>
 									<p class="competences">
+									<span class="competence"><i class="fas fa-hashtag"></i> Sélénium WebDriver </span>
+									<span class="competence"><i class="fas fa-hashtag"></i> Java</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> Page Factory</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> Page Object Model</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> Postman</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> BDD</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> TDD</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> Rest-Assured</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> TestLink</span>
+									<span class="competence"><i class="fas fa-hashtag"></i>  MySql</span>
+									<span class="competence"><i class="fas fa-hashtag"></i> MongoDB</span>
 								     <span class="competence"><i class="fas fa-hashtag"></i> HTML</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Javascript</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Prestashop</span>
 									 <span class="competence"><i class="fas fa-hashtag"></i> CSS</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Wordpress</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Photoshop</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Illustrator</span>			
-									 <span class="competence"><i class="fas fa-hashtag"></i> PHP</span>
+									 <span class="competence"><i class="fas fa-hashtag"></i> Javascript</span>
 									 <span class="competence"><i class="fas fa-hashtag"></i> ReactJs</span>
 									 <span class="competence"><i class="fas fa-hashtag"></i> expressJs</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Sélénium WebDriver </span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> TestLink</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Java</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Page Object Model</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Page Factory</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i>  MySql</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> MongoDB</span>
-									 <span class="competence"><i class="fas fa-hashtag"></i> Postman</span>
+									 <span class="competence"><i class="fas fa-hashtag"></i> PHP</span>
+									 <span class="competence"><i class="fas fa-hashtag"></i> Prestashop</span>
+						
+									 <span class="competence"><i class="fas fa-hashtag"></i> Photoshop</span>
+									 <span class="competence"><i class="fas fa-hashtag"></i> Illustrator</span>			
+									
+					
 
 								</p>
 								</header>
@@ -105,6 +110,88 @@
 
 						<!-- Posts -->
 						    <h4 style="text-align:center" id="realisations"> My projects </h4>
+							<section>
+								<article>
+									<header>
+										<span class="date"> May, 2023</span>
+										
+										<h2> Demo Framework testing Rest-API using Rest-Assured library   <br />
+										</h2>
+									</header>
+									
+									<p> &nbsp;&nbsp;&nbsp;&nbsp;This demo project came after a self training session in API testing using Postman, Testng and Rest-Assured library. It 
+										consists of a design, implementation and execution of a framework testing some CRUD web API defined 
+										in the website <a href=" https://restful-booker.herokuapp.com/" style="color:blue" target="_blank"> https://restful-booker.herokuapp.com/</a>.
+										Unlike many other websites dedicated to APIs test, Restful-booker gives testers enough time to perfom tests on the a same record 
+										they created before it disappears automatically. The Restful-booker's documentation mentions that the API cames pre-loaded with 10 records 
+										and it resets itself every 10 minutes back to that default state. 
+									</p>
+								     <p>
+										The Restful-booker API gathers the defined HTTP requests in 3 models :
+										<br/>&nbsp;&nbsp;&nbsp;&#9193; Booking model : With 7 requests that allow API's testers to test the main HTTP requests such us GET, 
+										POST, PUT, PATCH and DELETE booking.
+										<br/>&nbsp;&nbsp;&nbsp;&#9193; Auth model : By its unique request, it allows testers to create a new Admin and 
+										get a token with which they can update and delete Booking.   
+										<br/>&nbsp;&nbsp;&nbsp;&#9193; Ping model : offers one HTTP request used to check the heath of the application. 
+
+										<br/> In the picture below, I have summarized all the test cases described on Restful-booker websites. 
+
+										<img  class="image fit"  style="margin-bottom:-2rem" src="images/requirements.png" alt="framework architecture" />
+									</p>
+									<p>
+										
+										To design the framework, I have taken as a reference a set of videos, presented by the Senior Software Developer 
+										in Test Pavan Kumar, from his Youtube channel SDET-QA Automation Techie. In his session <a href=" https://www.youtube.com/watch?v=OM4mr3PKgcQ&list=PLUDwpEzHYYLvLZX_QEGTNolPvNADXid0I" 
+										style="color:blue" target="_blank">
+										API Testing using RestAssured</a>,
+										I have particularly focused on videos 9 to 12. I have taken the same Pavan API's framework architecture in which, for each test
+										case, he separated the computing of response from its verification.
+										Therefore, 2 packages are created : Endpoints Package and Testcases package. 
+										Depending on the response, I have verified statuscode, statusline, headers, body elements and schema. Other packages are 
+										created such as Payloads in which classes are dedicated to generate instance of Booking and Admin Objects.  
+										The following picture describes the framework's architecture specifiying dependencies, plugins needed and also outputs.  
+										<img  class="image fit"  style="margin-bottom:-2rem" src="images/restful-booker.png" alt="framework architecture" />
+										
+										I have choosen Allure-Report as an output instead of Extent-Report implemented in Pavan's framework. Also, I have added logs 
+										messages indicating the begin, end and result of each test case. Logs messages respecting standards applied by tester's 
+										international community are generated after execution. In fact each logs line begins with timestamp, alert type (WARNING, INFO, ERROR...) followed
+										 by class name, then testcase name, finally execution state or result. The console's screenshot below shows examples of 
+										 logs messages after excecuting my api test framework. 
+										
+										Notice too that all logs console messages are copied and stored in txt file named appLogs.txt. When test case fails a copy of error
+										message shown in console, is also copied in the appLog file.
+									    
+										 <img  class="image fit"  style="border:solid 3px blue" src="images/logs2.jpg" alt="framework architecture" />
+										
+									</p>
+									<p> 
+										After design and implementation of the Restful-API test framework, comes the stage of continious integration, where I have configured 
+										Jenkins in order to execute the framework and generate report. The following screenshop of Jenkins console shows 
+										that all test case are runned successfully and allure report is generated. 
+										
+										<img  class="image fit"  style="border:solid 3px blue" src="images/jenkings_console.png" alt="console" />
+
+										A screenshot below of Allure-Report shows its big advantages to summarize results of execution. In fact, 
+										in addition to execution's results found in mmost of other report templates,  Allure can be 
+										configured in the way to add some detailed information about resquest/response body, statuscode, statusline and 
+										son on. 
+
+										<img  class="image fit"  style="border:solid 3px blue" src="images/allure2.png" alt="report" />
+
+										
+										To conclude, in this demo project I have designed, implemented and executed a framework which tests the Restful-booker 
+										API. The design of the framework is achieved by performing separately test's response and its checking. Execution
+										is performed through Jenkins which has been configured to provide Allure-report summarizing all the results. 
+										The framework is downloadable through the link below.
+										<ul class="actions special">
+											<li><a href="https://github.com/momobiz/restful-booker-api-framework.git" target="_blank" class="button"> 
+												Restful-Booker-API <i class="fab fa-github"></i> </a></li>
+										</ul>
+										
+									</p>
+								</article>
+
+							</section>
 							
 
 							<section class="posts" >
@@ -139,8 +226,8 @@
 										</p>
 
 										<p>
-														
-										<br/> Then I designed and realized a second framework for testing apis. It has some caracteristics described below :
+													
+										<br/> <i class="fas fa-wrench"></i> Then I designed and realized a second framework for testing apis. It has some caracteristics described below :
 										
 										<br/>&nbsp;&nbsp;&nbsp;&#9193; Application of the BDD approach
 										<br/>&nbsp;&nbsp;&nbsp;&#9193; Usage of Rest-Assured et TestNG libraries
